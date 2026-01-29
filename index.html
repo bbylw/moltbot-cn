@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moltbot - 个人AI助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🦞</span>
+                <span class="logo-text">Moltbot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">功能</a></li>
+                <li><a href="#channels">渠道</a></li>
+                <li><a href="#install">安装</a></li>
+                <li><a href="#docs">文档</a></li>
+                <li><a href="https://github.com/moltbot/moltbot" target="_blank">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🦞 个人AI助手</div>
+            <h1 class="hero-title">Moltbot</h1>
+            <p class="hero-subtitle">在您自己的设备上运行的个人AI助手</p>
+            <p class="hero-description">
+                在您常用的通讯渠道上与您互动（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat），
+                支持语音对话，并可以渲染实时画布。Gateway只是控制平面——真正的产品是助手本身。
+            </p>
+            <div class="hero-buttons">
+                <a href="#install" class="btn btn-primary">开始使用</a>
+                <a href="https://docs.molt.bot" target="_blank" class="btn btn-secondary">查看文档</a>
+            </div>
+            <div class="hero-badges">
+                <span class="badge">🚀 本地优先</span>
+                <span class="badge">🔒 隐私安全</span>
+                <span class="badge">🌐 多平台</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-illustration">
+                <div class="chat-bubble">你好！我是Moltbot 🦞</div>
+                <div class="chat-bubble user">帮我整理一下待办事项</div>
+                <div class="chat-bubble">当然！让我为您整理...</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">核心功能</h2>
+            <p class="section-subtitle">一个个人、单用户的助手，感觉本地化、快速、始终在线</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>本地优先Gateway</h3>
+                    <p>单一控制平面，管理会话、渠道、工具和事件</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>多渠道收件箱</h3>
+                    <p>支持WhatsApp、Telegram、Slack、Discord、Google Chat等</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>多代理路由</h3>
+                    <p>将入站渠道/账户/对等方路由到隔离的代理</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>语音唤醒 + 对话模式</h3>
+                    <p>macOS/iOS/Android上的始终在线语音功能</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>实时画布</h3>
+                    <p>代理驱动的可视化工作空间，支持A2UI</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>一流工具</h3>
+                    <p>浏览器、画布、节点、cron、会话和Discord/Slack操作</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="channels" id="channels">
+        <div class="container">
+            <h2 class="section-title">支持的渠道</h2>
+            <p class="section-subtitle">与您常用的通讯平台无缝集成</p>
+            
+            <div class="channels-grid">
+                <div class="channel-item">
+                    <span class="channel-icon">💬</span>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">✈️</span>
+                    <span>Telegram</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">💼</span>
+                    <span>Slack</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🎮</span>
+                    <span>Discord</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">💬</span>
+                    <span>Google Chat</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🔒</span>
+                    <span>Signal</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🍎</span>
+                    <span>iMessage</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🔵</span>
+                    <span>BlueBubbles</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">📊</span>
+                    <span>Microsoft Teams</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🌐</span>
+                    <span>Matrix</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🇻🇳</span>
+                    <span>Zalo</span>
+                </div>
+                <div class="channel-item">
+                    <span class="channel-icon">🌐</span>
+                    <span>WebChat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="install" id="install">
+        <div class="container">
+            <h2 class="section-title">快速开始</h2>
+            <p class="section-subtitle">推荐设置：运行引导向导</p>
+            
+            <div class="install-content">
+                <div class="install-info">
+                    <h3>系统要求</h3>
+                    <ul>
+                        <li>运行时：<strong>Node ≥22</strong></li>
+                        <li>支持：macOS、Linux、Windows（通过WSL2）</li>
+                        <li>包管理器：npm、pnpm 或 bun</li>
+                    </ul>
+                    
+                    <h3>推荐模型</h3>
+                    <p>强烈推荐使用 <strong>Anthropic Pro/Max (100/200) + Opus 4.5</strong>，具有长上下文优势和更好的提示注入防护。</p>
+                </div>
+                
+                <div class="install-code">
+                    <div class="code-header">
+                        <span class="code-title">安装命令</span>
+                        <button class="copy-btn" onclick="copyCode()">复制</button>
+                    </div>
+                    <pre><code># 安装
+npm install -g moltbot@latest
+# 或: pnpm add -g moltbot@latest
+
+# 运行引导向导
+moltbot onboard --install-daemon
+
+# 启动Gateway
+moltbot gateway --port 18789 --verbose
+
+# 发送消息
+moltbot message send --to +1234567890 --message "Hello from Moltbot"
+
+# 与助手对话
+moltbot agent --message "Ship checklist" --thinking high</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="architecture">
+        <div class="container">
+            <h2 class="section-title">工作原理</h2>
+            <div class="architecture-diagram">
+                <div class="arch-layer channels-layer">
+                    <h4>通讯渠道</h4>
+                    <p>WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBubbles / Microsoft Teams / Matrix / Zalo / Zalo Personal / WebChat</p>
+                </div>
+                <div class="arch-arrow">▼</div>
+                <div class="arch-layer gateway-layer">
+                    <h4>Gateway（控制平面）</h4>
+                    <p>ws://127.0.0.1:18789</p>
+                </div>
+                <div class="arch-arrow">▼</div>
+                <div class="arch-connections">
+                    <div class="arch-conn-item">Pi 代理 (RPC)</div>
+                    <div class="arch-conn-item">CLI (moltbot ...)</div>
+                    <div class="arch-conn-item">WebChat UI</div>
+                    <div class="arch-conn-item">macOS 应用</div>
+                    <div class="arch-conn-item">iOS / Android 节点</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="security">
+        <div class="container">
+            <h2 class="section-title">安全模型</h2>
+            <div class="security-grid">
+                <div class="security-card">
+                    <h3>🔒 默认安全</h3>
+                    <p>工具在主会话的主机上运行，因此当只有您使用时，代理具有完全访问权限。</p>
+                </div>
+                <div class="security-card">
+                    <h3>🛡️ 群组/频道安全</h3>
+                    <p>设置 <code>sandbox.mode: "non-main"</code> 以在非主会话（群组/频道）中运行Docker沙箱。</p>
+                </div>
+                <div class="security-card">
+                    <h3>✅ DM配对</h3>
+                    <p>未知发送者会收到配对码，机器人不会处理他们的消息，直到被批准。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commands">
+        <div class="container">
+            <h2 class="section-title">聊天命令</h2>
+            <p class="section-subtitle">在任何支持的渠道中发送这些命令</p>
+            
+            <div class="commands-grid">
+                <div class="command-item">
+                    <code>/status</code>
+                    <span>紧凑的会话状态</span>
+                </div>
+                <div class="command-item">
+                    <code>/new</code> 或 <code>/reset</code>
+                    <span>重置会话</span>
+                </div>
+                <div class="command-item">
+                    <code>/compact</code>
+                    <span>压缩会话上下文</span>
+                </div>
+                <div class="command-item">
+                    <code>/think &lt;level&gt;</code>
+                    <span>设置思考级别</span>
+                </div>
+                <div class="command-item">
+                    <code>/verbose on|off</code>
+                    <span>切换详细模式</span>
+                </div>
+                <div class="command-item">
+                    <code>/usage off|tokens|full</code>
+                    <span>每响应使用页脚</span>
+                </div>
+                <div class="command-item">
+                    <code>/restart</code>
+                    <span>重启gateway（仅限所有者）</span>
+                </div>
+                <div class="command-item">
+                    <code>/activation mention|always</code>
+                    <span>群组激活切换</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="docs" id="docs">
+        <div class="container">
+            <h2 class="section-title">文档资源</h2>
+            <div class="docs-grid">
+                <a href="https://docs.molt.bot/start/getting-started" target="_blank" class="doc-card">
+                    <h3>🚀 入门指南</h3>
+                    <p>新用户开始使用的完整指南</p>
+                </a>
+                <a href="https://docs.molt.bot/concepts/architecture" target="_blank" class="doc-card">
+                    <h3>🏗️ 架构概览</h3>
+                    <p>了解Gateway和协议模型</p>
+                </a>
+                <a href="https://docs.molt.bot/gateway/configuration" target="_blank" class="doc-card">
+                    <h3>⚙️ 配置参考</h3>
+                    <p>所有配置键和示例</p>
+                </a>
+                <a href="https://docs.molt.bot/gateway/security" target="_blank" class="doc-card">
+                    <h3>🔐 安全指南</h3>
+                    <p>在暴露任何内容之前阅读</p>
+                </a>
+                <a href="https://docs.molt.bot/channels" target="_blank" class="doc-card">
+                    <h3>📱 渠道配置</h3>
+                    <p>设置各种通讯渠道</p>
+                </a>
+                <a href="https://docs.molt.bot/tools" target="_blank" class="doc-card">
+                    <h3>🛠️ 工具平台</h3>
+                    <p>浏览器、画布、节点等</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="community">
+        <div class="container">
+            <h2 class="section-title">社区</h2>
+            <p class="section-subtitle">加入我们的社区，与其他用户交流</p>
+            
+            <div class="community-links">
+                <a href="https://discord.gg/clawd" target="_blank" class="community-btn discord">
+                    <span>💬</span> Discord
+                </a>
+                <a href="https://github.com/moltbot/moltbot" target="_blank" class="community-btn github">
+                    <span>⭐</span> GitHub
+                </a>
+                <a href="https://x.com/moltbot" target="_blank" class="community-btn twitter">
+                    <span>🐦</span> Twitter
+                </a>
+            </div>
+            
+            <div class="about-section">
+                <h3>关于 Moltbot</h3>
+                <p>Moltbot 是为 <strong>Molty</strong> 构建的——一只太空龙虾AI助手 🦞</p>
+                <p>由 Peter Steinberger 和社区开发</p>
+                <div class="links">
+                    <a href="https://clawd.me" target="_blank">clawd.me</a> ·
+                    <a href="https://soul.md" target="_blank">soul.md</a> ·
+                    <a href="https://steipete.me" target="_blank">steipete.me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🦞</span>
+                    <span class="logo-text">Moltbot</span>
+                </div>
+                <p class="footer-tagline">EXFOLIATE! EXFOLIATE!</p>
+                <p class="footer-license">MIT License · 开源项目</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
