@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moltbot - 个人AI助手</title>
+  <title>OpenClaw - 个人AI助手</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,13 +91,13 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
           <span class="text-3xl">🦞</span>
-          <span class="font-display text-2xl font-bold tracking-wider text-cyber-primary">MOLTBOT</span>
+          <span class="font-display text-2xl font-bold tracking-wider text-cyber-primary">OPENCLAW</span>
         </div>
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="text-gray-400 hover:text-cyber-primary transition-colors">功能</a>
           <a href="#channels" class="text-gray-400 hover:text-cyber-primary transition-colors">渠道</a>
           <a href="#install" class="text-gray-400 hover:text-cyber-primary transition-colors">安装</a>
-          <a href="https://docs.molt.bot" target="_blank" class="text-gray-400 hover:text-cyber-primary transition-colors">文档</a>
+          <a href="https://docs.openclaw.ai" target="_blank" class="text-gray-400 hover:text-cyber-primary transition-colors">文档</a>
         </div>
         <a href="#install" class="px-6 py-2 bg-cyber-primary text-cyber-darker font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,212,255,0.5)] transition-all">
           开始使用
@@ -123,15 +123,16 @@
         </h1>
         
         <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-          <strong class="text-cyber-primary">Moltbot</strong> 是一个在你自己的设备上运行的个人AI助手。
-          在你常用的通讯渠道上与你互动，本地、快速、始终在线。
+          <strong class="text-cyber-primary">OpenClaw</strong> 是一个运行在您自己设备上的个人AI助手。
+          在你已经使用的渠道上回复你（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat），
+          同时也支持 BlueBubbles、Matrix、Zalo 和 Zalo Personal 等扩展渠道。网关只是控制平面——产品本身就是这个助手。
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#install" class="px-8 py-4 bg-cyber-primary text-cyber-darker font-bold text-lg rounded-full hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] transition-all transform hover:scale-105">
             🚀 立即安装
           </a>
-          <a href="https://docs.molt.bot" target="_blank" class="px-8 py-4 glass-card text-white font-bold text-lg rounded-full border border-white/20 hover:border-cyber-primary/50 transition-all">
+          <a href="https://docs.openclaw.ai" target="_blank" class="px-8 py-4 glass-card text-white font-bold text-lg rounded-full border border-white/20 hover:border-cyber-primary/50 transition-all">
             📖 查看文档
           </a>
         </div>
@@ -152,7 +153,7 @@
           <span class="gradient-text">核心特性</span>
         </h2>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-          Moltbot 提供全方位的AI助手体验，从多渠道通讯到高级工具集成
+          OpenClaw 提供全方位的AI助手体验，从多渠道通讯到高级工具集成
         </p>
       </div>
       
@@ -300,7 +301,7 @@
             <span class="gradient-text">工作原理</span>
           </h2>
           <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-            Moltbot 采用网关架构，将各种通讯渠道统一到一个控制平面。
+            OpenClaw 采用网关架构，将各种通讯渠道统一到一个控制平面。
             通过WebSocket协议，实现实时、高效的AI交互体验。
           </p>
           
@@ -348,7 +349,7 @@
 └──────────────┬────────────────┘
                │
                ├─ Pi agent (RPC)
-               ├─ CLI (moltbot …)
+               ├─ CLI (openclaw …)
                ├─ WebChat UI
                ├─ macOS app
                └─ iOS / Android</code>
@@ -383,8 +384,8 @@
           </div>
           <p class="text-gray-400 mb-4">运行时要求: <strong class="text-white">Node.js ≥22</strong></p>
           <div class="bg-cyber-darker rounded-lg p-4 font-mono text-sm overflow-x-auto">
-            <code class="text-cyber-primary">npm install -g moltbot@latest</code><br>
-            <code class="text-gray-500"># 或: pnpm add -g moltbot@latest</code>
+            <code class="text-cyber-primary">npm install -g openclaw@latest</code><br>
+            <code class="text-gray-500"># 或: pnpm add -g openclaw@latest</code>
           </div>
         </div>
         
@@ -397,7 +398,7 @@
           </div>
           <p class="text-gray-400 mb-4">推荐的路径，适用于 macOS、Linux 和 Windows (WSL2)</p>
           <div class="bg-cyber-darker rounded-lg p-4 font-mono text-sm overflow-x-auto">
-            <code class="text-cyber-secondary">moltbot onboard --install-daemon</code>
+            <code class="text-cyber-secondary">openclaw onboard --install-daemon</code>
           </div>
         </div>
         
@@ -409,7 +410,7 @@
             <h3 class="font-display text-xl font-bold">启动网关</h3>
           </div>
           <div class="bg-cyber-darker rounded-lg p-4 font-mono text-sm overflow-x-auto">
-            <code class="text-cyber-accent">moltbot gateway --port 18789 --verbose</code>
+            <code class="text-cyber-accent">openclaw gateway --port 18789 --verbose</code>
           </div>
         </div>
         
@@ -421,13 +422,13 @@
             <h3 class="font-display text-xl font-bold">开始对话</h3>
           </div>
           <div class="bg-cyber-darker rounded-lg p-4 font-mono text-sm overflow-x-auto">
-            <code class="text-cyber-purple">moltbot agent --message "你好，Moltbot!" --thinking high</code>
+            <code class="text-cyber-purple">openclaw agent --message "你好，OpenClaw!" --thinking high</code>
           </div>
         </div>
         
         <div class="mt-8 text-center">
           <p class="text-gray-400 text-sm mb-4">从源码开发构建？</p>
-          <a href="https://docs.molt.bot/start/getting-started" target="_blank" class="text-cyber-primary hover:underline text-sm">
+          <a href="https://docs.openclaw.ai/start/getting-started" target="_blank" class="text-cyber-primary hover:underline text-sm">
             查看完整开发指南 →
           </a>
         </div>
@@ -460,7 +461,7 @@
               </li>
               <li class="flex items-start gap-3">
                 <span class="text-cyber-accent mt-1">✓</span>
-                <span><code class="bg-cyber-darker px-2 py-1 rounded">moltbot doctor</code> 检测风险配置</span>
+                <span><code class="bg-cyber-darker px-2 py-1 rounded">openclaw doctor</code> 检测风险配置</span>
               </li>
             </ul>
           </div>
@@ -471,11 +472,11 @@
             <span class="gradient-text">安全模型</span>
           </h2>
           <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-            Moltbot 连接到真实的通讯平台。我们采用纵深防御策略，
+            OpenClaw 连接到真实的通讯平台。我们采用纵深防御策略，
             默认情况下工具仅在<strong class="text-cyber-accent">主会话</strong>中运行，
             确保只有你信任的用户才能访问完整功能。
           </p>
-          <a href="https://docs.molt.bot/gateway/security" target="_blank" class="inline-flex items-center gap-2 text-cyber-primary hover:underline">
+          <a href="https://docs.openclaw.ai/gateway/security" target="_blank" class="inline-flex items-center gap-2 text-cyber-primary hover:underline">
             阅读安全指南
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -538,7 +539,7 @@
       
       <div class="mt-12 text-center">
         <p class="text-gray-400 text-sm mb-4">支持模型故障转移和身份验证轮替</p>
-        <a href="https://docs.molt.bot/concepts/models" target="_blank" class="text-cyber-primary hover:underline text-sm">
+        <a href="https://docs.openclaw.ai/concepts/models" target="_blank" class="text-cyber-primary hover:underline text-sm">
           查看模型配置文档 →
         </a>
       </div>
@@ -555,12 +556,12 @@
         准备好开始了吗？
       </h2>
       <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-        加入数千名已经在使用Moltbot的用户，
+        加入数千名已经在使用 OpenClaw 的用户，
         体验真正属于你自己的个人AI助手。
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://docs.molt.bot/start/getting-started" target="_blank" class="px-8 py-4 bg-cyber-primary text-cyber-darker font-bold text-lg rounded-full hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] transition-all transform hover:scale-105">
+        <a href="https://docs.openclaw.ai/start/getting-started" target="_blank" class="px-8 py-4 bg-cyber-primary text-cyber-darker font-bold text-lg rounded-full hover:shadow-[0_0_40px_rgba(0,212,255,0.5)] transition-all transform hover:scale-105">
           🚀 开始使用
         </a>
         <a href="https://discord.gg/clawd" target="_blank" class="px-8 py-4 glass-card text-white font-bold text-lg rounded-full border border-white/20 hover:border-cyber-secondary/50 transition-all">
@@ -569,19 +570,19 @@
       </div>
       
       <div class="mt-12 flex justify-center gap-8 text-gray-400">
-        <a href="https://github.com/moltbot/moltbot" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+        <a href="https://github.com/openclaw/openclaw" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
           GitHub
         </a>
-        <a href="https://docs.molt.bot" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+        <a href="https://docs.openclaw.ai" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
           </svg>
           文档
         </a>
-        <a href="https://molt.bot" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+        <a href="https://openclaw.ai" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
           </svg>
@@ -597,11 +598,11 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-3">
           <span class="text-3xl">🦞</span>
-          <span class="font-display text-xl font-bold tracking-wider text-cyber-primary">MOLTBOT</span>
+          <span class="font-display text-xl font-bold tracking-wider text-cyber-primary">OPENCLAW</span>
         </div>
         
         <p class="text-gray-500 text-sm">
-          Moltbot 为 <strong class="text-cyber-primary">Molty</strong> 而构建 — 一只太空龙虾AI助手 🦞
+          OpenClaw 为 <strong class="text-cyber-primary">Molty</strong> 而构建 — 一只太空龙虾AI助手 🦞
         </p>
         
         <div class="flex items-center gap-6 text-sm text-gray-500">
