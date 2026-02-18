@@ -25,9 +25,10 @@
 
 如果您想要一个感觉本地化、快速且永远在线的个人单用户助手，这就是您的选择。
 
-[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
-首选设置方式：运行入职向导 (`openclaw onboard`)。它会引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
+首选设置方式：在终端中运行入职向导 (`openclaw onboard`)。
+向导会分步引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
 支持使用 npm, pnpm, 或 bun。
 新安装？从这里开始：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
@@ -111,16 +112,16 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 完整安全指南：[安全](https://docs.openclaw.ai/gateway/security)
 
 默认行为在 Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 上：
-- **私信配对** (`dmPolicy="pairing"` / `channels.discord.dm.policy="pairing"` / `channels.slack.dm.policy="pairing"`): 未知发送者会收到一个简短的配对码，机器人不会处理他们的消息。
+- **私信配对** (`dmPolicy="pairing"` / `channels.discord.dmPolicy="pairing"` / `channels.slack.dmPolicy="pairing"`; 旧版: `channels.discord.dm.policy`, `channels.slack.dm.policy`): 未知发送者会收到一个简短的配对码，机器人不会处理他们的消息。
 - 批准方式：`openclaw pairing approve <channel> <code>` (然后发送者会被添加到本地允许列表存储中)。
-- 公共入站私信需要显式选择加入：设置 `dmPolicy="open"` 并在渠道允许列表 (`allowFrom` / `channels.discord.dm.allowFrom` / `channels.slack.dm.allowFrom`) 中包含 `"*"`。
+- 公共入站私信需要显式选择加入：设置 `dmPolicy="open"` 并在渠道允许列表 (`allowFrom` / `channels.discord.allowFrom` / `channels.slack.allowFrom`; 旧版: `channels.discord.dm.allowFrom`, `channels.slack.dm.allowFrom`) 中包含 `"*"`。
 
 运行 `openclaw doctor` 来发现有风险/配置错误的私信策略。
 
 ## 亮点
 
 - **[本地优先网关](https://docs.openclaw.ai/gateway)** — 会话、渠道、工具和事件的统一控制平面。
-- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, BlueBubbles (iMessage), iMessage (legacy), Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
+- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, BlueBubbles (iMessage, 推荐), iMessage (legacy), Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
 - **[多 Agent 路由](https://docs.openclaw.ai/gateway/configuration)** — 将入站渠道/账户/对等端路由到隔离的 Agent（工作区 + 每 Agent 会话）。
 - **[语音唤醒 (Voice Wake)](https://docs.openclaw.ai/nodes/voicewake) + [交谈模式 (Talk Mode)](https://docs.openclaw.ai/nodes/talk)** — macOS/iOS/Android 上的始终在线语音，支持 ElevenLabs。
 - **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — Agent 驱动的可视化工作区，支持 [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
@@ -142,7 +143,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 - [媒体管道](https://docs.openclaw.ai/nodes/images): 图像/音频/视频，转录钩子，大小限制，临时文件生命周期。音频详情：[Audio](https://docs.openclaw.ai/nodes/audio)。
 
 ### 渠道
-- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (旧版 imsg), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat)。
+- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat)。
 - [群组路由](https://docs.openclaw.ai/concepts/group-messages): 提及门控，回复标签，按渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
 
 ### 应用 + Nodes
@@ -242,17 +243,17 @@ macOS 应用可以以 **node 模式** 运行，并通过网关 WebSocket 广播�
 ## Agent 对 Agent (sessions_* 工具)
 
 - 使用这些工具在会话之间协调工作，无需在聊天界面之间跳转。
-- `sessions_list` — 发视活跃会话 (Agents) 及其元数据。
+- `sessions_list` — 发现活跃会话 (Agents) 及其元数据。
 - `sessions_history` — 获取会话的转录日志。
 - `sessions_send` — 给另一个会话发消息；可选的回复 ping-pong + 宣布步骤 (`REPLY_SKIP`, `ANNOUNCE_SKIP`)。
 
 详情：[会话工具](https://docs.openclaw.ai/concepts/session-tool)
 
-## 技能注册表 (ClawdHub)
+## 技能注册表 (ClawHub)
 
-ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以自动搜索技能并在需要时拉取新技能。
+ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自动搜索技能并在需要时拉取新技能。
 
-[ClawdHub](https://ClawdHub.com)
+[ClawHub](https://clawhub.com)
 
 ## 聊天命令
 
@@ -333,7 +334,7 @@ ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以�
 ### [Telegram](https://docs.openclaw.ai/channels/telegram)
 
 - 设置 `TELEGRAM_BOT_TOKEN` 或 `channels.telegram.botToken` (环境变量优先)。
-- 可选：设置 `channels.telegram.groups` (带 `channels.telegram.groups."*".requireMention`); 设置后，它是群组允许列表 (包含 `"*"` 以允许所有)。按需设置 `channels.telegram.allowFrom` 或 `channels.telegram.webhookUrl` + `channels.telegram.webhookSecret`。
+- 可选：设置 `channels.telegram.groups` (带 `channels.telegram.groups."*".requireMention`); 设置后，它是群组允许列表 (包含 `"*"` 以允许所有)。按需设置 `channels.telegram.allowFrom` or `channels.telegram.webhookUrl` + `channels.telegram.webhookSecret`。
 
 ```json5
 {
@@ -352,7 +353,7 @@ ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以�
 ### [Discord](https://docs.openclaw.ai/channels/discord)
 
 - 设置 `DISCORD_BOT_TOKEN` or `channels.discord.token` (环境变量优先)。
-- 可选：按需设置 `commands.native`, `commands.text`, 或 `commands.useAccessGroups`, 加上 `channels.discord.dm.allowFrom`, `channels.discord.guilds`, 或 `channels.discord.mediaMaxMb`。
+- 可选：按需设置 `commands.native`, `commands.text`, 或 `commands.useAccessGroups`, 加上 `channels.discord.allowFrom`, `channels.discord.guilds`, 或 `channels.discord.mediaMaxMb`。
 
 ```json5
 {
@@ -368,15 +369,9 @@ ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以�
 
 - 需要 `signal-cli` 和 `channels.signal` 配置部分。
 
-### [BlueBubbles (iMessage)](https://docs.openclaw.ai/channels/bluebubbles)
+### [iMessage](https://docs.openclaw.ai/channels/imessage)
 
-- **推荐** 的 iMessage 集成方式。
-- 配置 `channels.bluebubbles.serverUrl` + `channels.bluebubbles.password` 以及 webhook (`channels.bluebubbles.webhookPath`)。
-- BlueBubbles 服务器运行在 macOS 上；网关可以运行在 macOS 或其他地方。
-
-### [iMessage (legacy)](https://docs.openclaw.ai/channels/imessage)
-
-- 通过 `imsg` 实现的旧版仅限 macOS 的集成（信息应用必须已登录）。
+- 仅限 macOS; 信息应用必须已登录。
 - 如果设置了 `channels.imessage.groups`，它将成为群组允许列表；包含 `"*"` 以允许所有。
 
 ### [Microsoft Teams](https://docs.openclaw.ai/channels/msteams)
@@ -482,6 +477,8 @@ OpenClaw 是为 **Molty** 打造的，一只太空龙虾 AI 助手。 🦞
 欢迎提交 AI/vibe-coded PR! 🤖
 
 特别感谢 [Mario Zechner](https://mariozechner.at/) 的支持以及他的 [pi-mono](https://github.com/badlogic/pi-mono)。
-Special thanks to Adam Doppelt for lobster.bot.
+特别感谢 Adam Doppelt 为 lobster.bot 所做的贡献。
 
-感谢所有 clawtributors！完整名单请查看 [GitHub 贡献者列表](https://github.com/openclaw/openclaw/graphs/contributors)。
+感谢所有 clawtributors:
+
+[![clawtributors](https://contrib.rocks/image?repo=openclaw/openclaw)](https://github.com/openclaw/openclaw/graphs/contributors)
